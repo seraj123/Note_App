@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/pages/home_page.dart';
 
+import 'pages/search_page.dart';
+
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,9 +16,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
+        useMaterial3: true,
 
       ),
-      home: HomePage(),
+      home: const HomePage(),
+      routes: {
+        "SearchPage" :(context) => const SearchPage(),
+      },
     );
   }
 }

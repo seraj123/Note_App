@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/addnote_model_sheet.dart';
+import '../widgets/app_bar.dart';
+import '../widgets/list_view.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -10,30 +14,27 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-     // backgroundColor: Colors.limeAccent,
-      appBar: AppBar(
-        title: const Text("Notes"),
-      ),
+    return   Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.yellow.shade700,
+        
+        onPressed: (){
+          showModalBottomSheet(context: context, builder: (context){
+            return const AddNoteModelSheet();
+          });
+        },
+        child: const Icon(Icons.add, color: Colors.black,),),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+        
+        padding: const EdgeInsets.only(top: 80, left: 20, right: 20),
         child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:[
-              Text("Notes", style: TextStyle(fontSize: 28)),
-              Container(
-                decoration: BoxDecoration(
-                  
-                  borderRadius: BorderRadius.circular(15)
-                ),
-                child: Icon(Icons.search),
-              )
-          ])
-          ],
-        ),
+            children: const [
+               AppBarWidget(), 
+               Expanded(child: NotesListView()),
+                         ]
+          ),
       ),
     );
+    
   }
 }
