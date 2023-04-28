@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'add_button.dart';
 import 'custom_text_field.dart';
 
 class AddNoteModelSheet extends StatefulWidget {
@@ -13,13 +14,11 @@ class _AddNoteModelSheetState extends State<AddNoteModelSheet> {
   @override
   Widget build(BuildContext context) {
     return  Column(
-      children:  [
-        SizedBox(height: 20,),
-       CustomTextField(), 
-       TextButton(onPressed: (){
-          return;  
-       }, child: const Text("Add Note"))      
-
+      children: const [
+         SizedBox(height: 20,),
+        CustomTextField(), 
+        AddButton(),
+       
       ],
     );
   }

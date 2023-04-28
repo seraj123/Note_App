@@ -16,14 +16,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return   Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.yellow.shade700,
+        backgroundColor: Colors.blueGrey.shade700,
         
         onPressed: (){
           showModalBottomSheet(context: context, builder: (context){
             return const AddNoteModelSheet();
           });
         },
-        child: const Icon(Icons.add, color: Colors.black,),),
+        child: const Icon(Icons.add, color: Colors.amber,),),
       body: Padding(
         
         padding: const EdgeInsets.only(top: 80, left: 20, right: 20),

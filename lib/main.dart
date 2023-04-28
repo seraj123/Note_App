@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/pages/home_page.dart';
 
+import 'pages/edit_note_page.dart';
 import 'pages/search_page.dart';
 
 void main() {
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       ),
       home: const HomePage(),
       routes: {
-        "SearchPage" :(context) => const SearchPage(),
+        "SearchInput" :(context) => const SearchInput(),
+        "EditNotePage" : (context) => const EditNotePage(),
       },
     );
   }

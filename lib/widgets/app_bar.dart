@@ -20,13 +20,13 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               height: 45,
               width: 45,
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.blueGrey.shade700,
                 borderRadius: BorderRadius.circular(15)
               ),
               child: GestureDetector(
                 onTap: (){
                   setState(() {
-                    Navigator.of(context).pushNamed("SearchPage");
+                    Navigator.of(context).pushNamed("SearchInput");
                   });
                 },
                 child: const Icon(Icons.search, size: 25,)),
