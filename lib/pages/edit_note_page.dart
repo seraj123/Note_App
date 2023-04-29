@@ -7,6 +7,6 @@ class EditNotePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const EditNoteWidget();
+    return const EditNoteBody();
   }
 }

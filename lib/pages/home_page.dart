@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/addnote_model_sheet.dart';
-import '../widgets/app_bar.dart';
+import '../widgets/custom_app_bar.dart';
+import '../widgets/custom_drawer.dart';
 import '../widgets/list_view.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,6 +16,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return   Scaffold(
+      drawer: CustomDrawer(),
+      appBar: AppBar(
+        title: const Text("Notes"),
+              
+),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blueGrey.shade700,
         
@@ -26,10 +32,10 @@ class _HomePageState extends State<HomePage> {
         child: const Icon(Icons.add, color: Colors.amber,),),
       body: Padding(
         
-        padding: const EdgeInsets.only(top: 80, left: 20, right: 20),
+        padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
         child: Column(
             children: const [
-               AppBarWidget(), 
+               CustomAppBar(), 
                Expanded(child: NotesListView()),
                          ]
           ),
