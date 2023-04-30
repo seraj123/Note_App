@@ -16,7 +16,7 @@ class _AddNoteModelSheetState extends State<AddNoteModelSheet> {
     return  Column(
       children: const [
          SizedBox(height: 20,),
-        CustomTextField(), 
+        CustomTextField(hint: 'Title', textHint: 'Contact',), 
         AddButton(),
        
       ],
